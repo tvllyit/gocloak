@@ -4068,7 +4068,7 @@ func (g *GoCloak) MoveCredentialToFirst(ctx context.Context, token, realm, userI
 }
 
 // GetAdminEvents returns admin events
-func (g *GoCloak) GetAdminEvents(ctx context.Context, token string, realm string, params GetEventsParams) ([]*EventRepresentation, error) {
+func (g *GoCloak) GetAdminEvents(ctx context.Context, token string, realm string, params GetEventsParams) ([]*AdminEventRespresentation, error) {
 	const errMessage = "could not get events"
 
 	queryParams, err := GetQueryParams(params)
@@ -4076,7 +4076,7 @@ func (g *GoCloak) GetAdminEvents(ctx context.Context, token string, realm string
 		return nil, errors.Wrap(err, errMessage)
 	}
 
-	var result []*EventRepresentation
+	var result []*AdminEventRespresentation
 	resp, err := g.GetRequestWithBearerAuth(ctx, token).
 		SetResult(&result).
 		SetQueryParams(queryParams).
