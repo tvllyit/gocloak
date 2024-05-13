@@ -1363,7 +1363,7 @@ type GetEventsParams struct {
 	UserID    *string  `json:"user,omitempty"`
 }
 
-// AuthDetails
+// AuthDetails is a representation of a user authentication event
 type AuthDetails struct {
 	RealmID   *string `json:"realmId,omitempty"`
 	ClientID  *string `json:"clientId,omitempty"`
