@@ -365,7 +365,7 @@ DeleteAuthenticationFlow(ctx context.Context, token, realm, flowID string) error
 
  // *** Events API ***
  GetEvents(ctx context.Context, token string, realm string, params GetEventsParams) ([]*EventRepresentation, error)
- GetAdminEvents(ctx context.Context, token string, realm string, params GetEventsParams) ([]*AdminEventRespresentation, error)
+ GetAdminEvents(ctx context.Context, token string, realm string, params GetAdminEventsParams) ([]*AdminEventRespresentation, error)
  
 }
 ```
