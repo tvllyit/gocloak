@@ -1338,6 +1338,19 @@ type GetResourcePoliciesParams struct {
 	Max        *int    `json:"max,string,omitempty"`
 }
 
+// GetAdminEventsParams represents the optional parameters for getting admin events
+type GetAdminEventsParams struct {
+	ResourceTypes  []*string `json:"resourceTypes,omitempty"`
+	OperationTypes []*string `json:"operationTypes,omitempty"`
+	ResourcePath   *string   `json:"resourcePath,omitempty"`
+	Realm          *string   `json:"realm,omitempty"`
+	Client         *string   `json:"client,omitempty"`
+	User           *string   `json:"user,omitempty"`
+	IPAddress      *string   `json:"ipAddress,omitempty"`
+	DateFrom       *string   `json:"dateFrom,omitempty"`
+	DateTo         *string   `json:"dateTo,omitempty"`
+}
+
 // GetEventsParams represents the optional parameters for getting events
 type GetEventsParams struct {
 	Client    *string  `json:"client,omitempty"`
