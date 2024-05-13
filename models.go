@@ -1350,6 +1350,25 @@ type GetEventsParams struct {
 	UserID    *string  `json:"user,omitempty"`
 }
 
+// AuthDetails
+type AuthDetails struct {
+	RealmID   *string `json:"realmId,omitempty"`
+	ClientID  *string `json:"clientId,omitempty"`
+	UserID    *string `json:"userId,omitempty"`
+	IPAddress *string `json:"ipAddress,omitempty"`
+}
+
+// AdminEventRespresentation is a presentation of an Admin Event
+type AdminEventRespresentation struct {
+	Time           int64        `json:"time,omitempty"`
+	RealmID        *string      `json:"realmId,omitempty"`
+	AuthDetails    *AuthDetails `json:"authDetails,omitempty"`
+	OperationType  *string      `json:"operationType,omitempty"`
+	ResourceType   *string      `json:"resourceType,omitempty"`
+	ResoucePath    *string      `json:"resourcePath,omitempty"`
+	Representation *string      `json:"representation,omitempty"`
+}
+
 // EventRepresentation is a representation of a Event
 type EventRepresentation struct {
 	Time      int64             `json:"time,omitempty"`
